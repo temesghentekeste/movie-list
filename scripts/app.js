@@ -19,3 +19,10 @@ const createHtml = (movie) => {
       addForm.reset();
     }
 });
+
+//delete movies
+moviesList.addEventListener('click', e => {
+  if(e.target.classList.contains('delete')){
+    e.target.parentElement.remove();
+  }
+})
