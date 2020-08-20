@@ -1,0 +1,27 @@
+body {
+  background: rgb(21,19,50);
+background: linear-gradient(90deg, rgba(21,19,50,1) 0%, rgba(54,96,105,1) 62%, rgba(6,30,52,1) 100%);
+font-family: 'Libre Baskerville', serif;
+}
+
+.container {
+  max-width: 450px;
+}
+
+input[type=text],
+input[type=text]:focus {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+}
+
+.movies li {
+  background: #04155f;
+  border-bottom-color: #333;
+}
+
+.delete {
+  cursor: pointer;
+}
+

@@ -4,12 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movies List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <div class="container">
+    <header class="text-center text-light my-5">
+      <h1 class="mb-3">Movies List</h1>
+      <form class="search">
+        <input class="form-control m-auto" type="text" name="search" placeholder="Search movies">
+      </form>
+    </header>
+    <ul class="list-group movies mx-auto text-light">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        The Godfather
+        <i class="fas fa-trash delete"></i>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        The Inglorious Bastards
+        <i class="fas fa-trash delete"></i>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Gladiator
+        <i class="fas fa-trash delete"></i>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Oliver Twist
+        <i class="fas fa-trash delete"></i>
+      </li>
+    </ul>
+    <form class="add text-center my-4">
+      <label  class="text-light">Add new movie...</label>
+      <input type="text" class="form-control m-auto" name="add">
+    </form>
+  </div>
+
   <script src='scripts/app.js'></script>
 </body>
 </html>
