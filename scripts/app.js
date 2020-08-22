@@ -9,39 +9,37 @@ const createHtml = (movie) => {
         <i class="fas fa-trash delete"></i>
       </li>
     `;
-    moviesList.innerHTML += html;
+  moviesList.innerHTML += html;
+};
+
+addForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const movie = addForm.movie.value.trim();
+  if (movie) {
+    createHtml(movie);
+    addForm.reset();
   }
-  
-  addForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const movie = addForm.movie.value.trim();
-    if(movie){
-      createHtml(movie);
-      addForm.reset();
-    }
 });
 
-//delete movies
+// delete movies
 moviesList.addEventListener('click', e => {
-  if(e.target.classList.contains('delete')){
+  if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
 });
 
 const filterMovies = keyword => {
   Array.from(moviesList.children)
-       .filter( movie => !movie.textContent.includes(keyword))
-       .forEach(movie => movie.classList.add('filtered')
-       );
+    .filter(movie => !movie.textContent.includes(keyword))
+    .forEach(movie => movie.classList.add('filtered'));
 
   Array.from(moviesList.children)
-      .filter( movie => movie.textContent.includes(keyword))
-      .forEach(movie => movie.classList.remove('filtered')
-      );
-}
+    .filter(movie => movie.textContent.includes(keyword))
+    .forEach(movie => movie.classList.remove('filtered'));
+};
 
-//search functionality
-searchInput.addEventListener('keyup', e=>{
+// search functionality
+searchInput.addEventListener('keyup', () => {
   const keyword = searchInput.value.trim();
   filterMovies(keyword);
-})
+});
