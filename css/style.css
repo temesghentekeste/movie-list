@@ -1,7 +1,7 @@
 body {
-  background: rgb(21,19,50);
-background: linear-gradient(90deg, rgba(21,19,50,1) 0%, rgba(54,96,105,1) 62%, rgba(6,30,52,1) 100%);
-font-family: 'Libre Baskerville', serif;
+  background: rgb(21, 19, 50);
+  background: linear-gradient(90deg, rgba(21, 19, 50, 1) 0%, rgba(54, 96, 105, 1) 62%, rgba(6, 30, 52, 1) 100%);
+  font-family: 'Libre Baskerville', serif;
 }
 
 .container {
