@@ -30,16 +30,16 @@ moviesList.addEventListener('click', e => {
 
 const filterMovies = keyword => {
   Array.from(moviesList.children)
-    .filter(movie => !movie.textContent.includes(keyword))
+    .filter(movie => !movie.textContent.toLowerCase().includes(keyword))
     .forEach(movie => movie.classList.add('filtered'));
 
   Array.from(moviesList.children)
-    .filter(movie => movie.textContent.includes(keyword))
+    .filter(movie => movie.textContent.toLowerCase().includes(keyword))
     .forEach(movie => movie.classList.remove('filtered'));
 };
 
 // search functionality
 searchInput.addEventListener('keyup', () => {
   const keyword = searchInput.value.trim();
-  filterMovies(keyword);
+  filterMovies(keyword.toLowerCase());
 });
